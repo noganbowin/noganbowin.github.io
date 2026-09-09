@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰山旅游图-泰山游览路线地图与景点攻略大全</title>
+    <meta name="description" content="泰山旅游图专题，提供泰山登山路线地图、徒步线路、景点分布、日出观赏点、缆车索道及实用旅游攻略，助您规划泰安之行。">
+    <meta name="keywords" content="泰山旅游图,泰山地图,泰山游览路线,泰山攻略,泰山日出,泰山景点">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f7f6;
+            color: #2c3e3b;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #1f3d2b 0%, #2d5a3f 60%, #3c7a54 100%);
+            padding: 18px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            color: #f0f7e8;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            font-size: 2rem;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+        .nav-menu a {
+            color: #d9ebd3;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-menu a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .hero {
+            background: linear-gradient(rgba(20, 40, 25, 0.65), rgba(15, 30, 20, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400"><rect fill="%233a5f4b" width="1200" height="400"/><polygon points="0,300 200,150 350,240 500,80 700,220 900,110 1100,260 1200,180 1200,400 0,400" fill="%232c4a38"/><polygon points="0,340 250,230 450,300 650,190 850,290 1050,230 1200,300 1200,400 0,400" fill="%231e3328"/><circle cx="850" cy="70" r="30" fill="%23f5e6b8"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0 90px;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.35);
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f3d2b;
+            margin: 50px 0 25px;
+            position: relative;
+            padding-left: 18px;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 6px;
+            height: 28px;
+            background: #2d6a4f;
+            border-radius: 4px;
+        }
+        .intro-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 35px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin: 30px 0;
+            border-left: 6px solid #2d6a4f;
+        }
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 20px 0 30px;
+        }
+        .route-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e8efea;
+        }
+        .route-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+        .route-img {
+            height: 160px;
+            background: #d9e6d9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #2d6a4f;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .route-body {
+            padding: 20px;
+        }
+        .route-body h3 {
+            font-size: 1.3rem;
+            color: #1f3d2b;
+            margin-bottom: 8px;
+        }
+        .route-meta {
+            font-size: 0.85rem;
+            color: #557a66;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #cbdcd0;
+            padding-bottom: 10px;
+        }
+        .route-body p {
+            font-size: 0.95rem;
+            color: #3a4f42;
+        }
+        .map-section {
+            background: #eef3ef;
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin: 40px 0;
+        }
+        .map-placeholder {
+            background: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 1px dashed #b8cec0;
+            color: #4a6b58;
+            margin: 20px 0;
+        }
+        .map-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            border-left: 4px solid #2d6a4f;
+            font-size: 0.95rem;
+        }
+        .spot-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 18px;
+            margin: 20px 0;
+        }
+        .spot-card {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+            border: 1px solid #e6ece6;
+        }
+        .spot-card h4 {
+            color: #1f3d2b;
+            margin-bottom: 6px;
+            font-size: 1.1rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #e2f0e6;
+            color: #1f5c3a;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-right: 6px;
+            margin-top: 6px;
+        }
+        .tips-box {
+            background: #fdf9ec;
+            border-radius: 14px;
+            padding: 25px;
+            border: 1px solid #eee2b8;
+            margin: 30px 0;
+        }
+        .tips-box h3 {
+            color: #7a5d1c;
+            margin-bottom: 12px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 12px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .faq-item h4 {
+            color: #1f3d2b;
+            margin-bottom: 6px;
+        }
+        footer {
+            background: #1f3d2b;
+            color: #c1d9c8;
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+        .footer-links a {
+            color: #a8c8b2;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .hero {
+                padding: 60px 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .route-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-wrap">
+            <a href="#" class="logo">
+                <span class="logo-icon">⛰️</span> 泰山旅游图
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#routes">登山路线</a></li>
+                    <li><a href="#map">景区地图</a></li>
+                    <li><a href="#spots">主要景点</a></li>
+                    <li><a href="#tips">实用攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 首屏 -->
+        <section class="hero">
+            <div class="container">
+                <h1>泰山旅游图 · 登山路线与景点导览</h1>
+                <p>一张图读懂泰山怎么玩——经典红门路线、天外村乘车线、桃花峪线路全解析，包含日出观赏点、缆车换乘与徒步地图要点。</p>
+                <div class="hero-badges">
+                    <span class="badge">🏔️ 海拔1545米</span>
+                    <span class="badge">🕒 登山约4-6小时</span>
+                    <span class="badge">🌄 日出最佳观赏区</span>
+                    <span class="badge">🎫 门票信息查询</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 简介 -->
+            <section class="intro-card">
+                <h2 style="color:#1f3d2b; margin-bottom:12px;">泰山旅游图怎么看？</h2>
+                <p>泰山旅游图并不仅仅是一张普通的地图，它集合了登山步道、缆车线路、景点分布、休息区与卫生间等实用信息。对于第一次前往泰山的游客，看懂旅游图能帮你更合理地安排时间与体力。以下我们从路线、地图、景点等维度，为您梳理泰山旅游的核心信息。</p>
+            </section>
+
+            <!-- 登山路线 -->
+            <section id="routes">
+                <h2 class="section-title">经典登山路线对比</h2>
+                <div class="route-grid">
+                    <div class="route-card">
+                        <div class="route-img" style="background:#d3e3d3;">🚶</div>
+                        <div class="route-body">
+                            <h3>红门登山线</h3>
+                            <div class="route-meta">徒步经典 · 全程约9.5公里 · 需4-6小时</div>
+                            <p>从红门开始步行，经中天门、十八盘直到南天门。适合体力较好的游客，可深度体验泰山人文与自然景观。沿途摩崖石刻众多。</p>
+                            <span class="tag">徒步</span>
+                            <span class="tag">文化</span>
+                            <span class="tag">经典</span>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <div class="route-img" style="background:#cfe4d6;">🚌</div>
+                        <div class="route-body">
+                            <h3>天外村乘车线</h3>
+                            <div class="route-meta">乘车+索道 · 快速登顶 · 约2-3小时</div>
+                            <p>从天外村乘景区大巴至中天门，再换乘索道直达南天门。省力高效，适合带老人、孩子或时间有限的游客。</p>
+                            <span class="tag">省力</span>
+                            <span class="tag">索道</span>
+                            <span class="tag">家庭</span>
+                        </div>
+                    </div>
+                    <div class="route-card">
+                        <div class="route-img" style="background:#d9e8dc;">🌿</div>
+                        <div class="route-body">
+                            <h3>桃花峪线路</h3>
+                            <div class="route-meta">自然风光 · 游客较少 · 全长约12公里</div>
+                            <p>从桃花峪进山，前半段溪水潺潺，植被丰富。到达桃花源后可乘索道至南天门。适合喜欢清幽自然风光的游客。</p>
+                            <span class="tag">清静</span>
+                            <span class="tag">自然</span>
+                            <span class="tag">徒步</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 地图区域 -->
+            <section id="map" class="map-section">
+                <h2 class="section-title" style="margin-top:0;">景区旅游图示意</h2>
+                <div class="map-placeholder">
+                    <p style="font-size:1.1rem; font-weight:600;">🗺️ 泰山景区简图（文字版）</p>
+                    <p style="margin:15px 0;">红门 → 斗母宫 → 中天门 → 云步桥 → 五大夫松 → 十八盘 → 南天门 → 天街 → 玉皇顶</p>
+                    <p style="font-size:0.9rem; color:#5d7a69;">天外村 → (大巴) → 中天门 ⇄ (索道) ⇄ 南天门</p>
+                    <p style="font-size:0.9rem; color:#5d7a69;">桃花峪 → (景区车) → 桃花源 ⇄ (索道) ⇄ 南天门</p>
+                </div>
+                <div class="map-features">
+                    <div class="feature-item">📍 中天门：徒步与索道换乘枢纽</div>
+                    <div class="feature-item">🎫 天外村：景区大巴发车点</div>
+                    <div class="feature-item">⛩️ 南天门：核心景区入口，天街起点</div>
+                    <div class="feature-item">🌄 日观峰：日出观赏首选地</div>
+                </div>
+            </section>
+
+            <!-- 主要景点 -->
+            <section id="spots">
+                <h2 class="section-title">泰山主要景点分布</h2>
+                <div class="spot-list">
+                    <div class="spot-card">
+                        <h4>岱庙</h4>
+                        <p>泰山最大最完整的古建筑群，位于山脚，是登山的起点与历史背景。</p>
+                        <span class="tag">古建</span><span class="tag">历史</span>
+                    </div>
+                    <div class="spot-card">
+                        <h4>红门宫</h4>
+                        <p>徒步登山传统起点，因西山崖有红色石头而得名。</p>
+                        <span class="tag">起点</span><span class="tag">人文</span>
+                    </div>
+                    <div class="spot-card">
+                        <h4>中天门</h4>
+                        <p>登山半程标志，也是换乘索道或继续徒步的分岔口。</p>
+                        <span class="tag">枢纽</span><span class="tag">补给</span>
+                    </div>
+                    <div class="spot-card">
+                        <h4>十八盘</h4>
+                        <p>泰山最险要的盘道，共1600余级台阶，是登山挑战的精华。</p>
+                        <span class="tag">险峻</span><span class="tag">挑战</span>
+                    </div>
+                    <div class="spot-card">
+                        <h4>南天门</h4>
+                        <p>海拔约1460米，进入天街的门户，视野开阔。</p>
+                        <span class="tag">地标</span><span class="tag">观景</span>
+                    </div>
+                    <div class="spot-card">
+                        <h4>玉皇顶</h4>
+                        <p>泰山极顶，海拔1545米，是观日出、看云海的绝佳位置。</p>
+                        <span class="tag">极顶</span><span class="tag">日出</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实用攻略 -->
+            <section id="tips">
+                <h2 class="section-title">登山实用建议</h2>
+                <div class="tips-box">
+                    <h3>⏰ 时间规划参考</h3>
+                    <p>• 全程徒步（红门-玉皇顶）：建议预留6-7小时，含休息与拍照。<br>
+                    • 乘车+索道组合：约3小时可完成上下山。<br>
+                    • 夜爬看日出：需提前准备头灯、保暖衣物，并关注景区开放时间。</p>
+                </div>
+                <div class="tips-box" style="background:#f4f8f4; border-color:#c5dccb;">
+                    <h3>🎒 装备与补给</h3>
+                    <p>• 登山杖（山脚与中天门有售）、舒适防滑鞋。<br>
+                    • 水与高热量零食：山上有多个补给点，但价格略高。<br>
+                    • 防晒与雨具：山顶天气多变，建议备一件轻便雨衣。<br>
+                    • 保暖外套：山顶与山下温差较大，尤其清晨观日出时。</p>
+                </div>
+                <div class="tips-box" style="background:#f1f0e8; border-color:#d1cfb2;">
+                    <h3>🎫 门票与索道信息</h3>
+                    <p>• 泰山景区门票为实名制，建议通过官方渠道提前预约。<br>
+                    • 索道运营时间随季节调整，旺季可能排队较久。<br>
+                    • 天外村至中天门的大巴车票与索道票需分别购买，请保留好票据。</p>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq">
+                <h2 class="section-title">游客常见问题</h2>
+                <div class="faq-item">
+                    <h4>❓ 第一次去泰山，选哪条路线比较好？</h4>
+                    <p>如果体力一般或时间有限，推荐天外村乘车至中天门，再乘索道到南天门；如果想体验登山乐趣，红门徒步线是经典之选，可根据身体状况选择徒步全程或到中天门后换乘索道。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ 泰山旅游图在哪里可以获取？</h4>
+                    <p>景区售票处、游客中心以及一些酒店都有纸质地图可取。此外，泰山景区官方网站和官方小程序提供电子导览图，可提前下载。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ 夜爬泰山需要注意什么？</h4>
+                    <p>夜爬需结伴而行，携带头灯或手电，穿保暖衣物。登山途中路灯有限，部分路段较暗。建议提前了解当日日出时间，并预留充足登顶时间。</p>
+                </div>
+                <div class="faq-item">
+                    <h4>❓ 泰山旅游图上的景点标识是否准确？</h4>
+                    <p>官方旅游图基本准确，但部分服务设施（如厕所维修、商铺暂停营业）可能动态变化，建议以现场指示牌为准。</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">泰山景区官网</a>
+                <a href="#">泰安旅游</a>
+                <a href="#">登山注意事项</a>
+                <a href="#">关于我们</a>
+            </div>
+            <p>© 2025 泰山旅游图指南 · 本页面信息仅供参考，出行前请确认最新公告</p>
+        </div>
+    </footer>
+</body>
+</html>
