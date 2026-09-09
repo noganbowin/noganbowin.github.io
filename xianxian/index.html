@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纤纤影视电视剧琅琊榜-深度剧情回顾与角色解析指南</title>
+    <meta name="description" content="纤纤影视电视剧琅琊榜专题页，为您深入解读琅琊榜剧情脉络、分析梅长苏、靖王等经典角色，回顾权谋经典片段，分享剧集魅力与观剧指南。">
+    <meta name="keywords" content="纤纤影视,电视剧琅琊榜,琅琊榜剧情,梅长苏,靖王,琅琊榜角色分析,经典权谋剧,琅琊榜观剧指南">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background: #f5f3f0;
+            color: #2c2a28;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部 */
+        .site-header {
+            background: #1a1a1a;
+            border-bottom: 4px solid #b39b72;
+            padding: 18px 0;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+        .logo-main {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e8dcc8;
+            letter-spacing: 2px;
+        }
+        .logo-sub {
+            font-size: 14px;
+            color: #b39b72;
+            letter-spacing: 1px;
+            border-left: 1px solid #b39b72;
+            padding-left: 12px;
+        }
+        .header-nav ul {
+            display: flex;
+            gap: 28px;
+        }
+        .header-nav a {
+            color: #ccc;
+            font-size: 15px;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .header-nav a:hover {
+            color: #fff;
+            border-bottom-color: #b39b72;
+        }
+
+        /* 主视觉 */
+        .hero-section {
+            background: linear-gradient(135deg, #1f1e1c 0%, #2a2825 60%, #3b352e 100%);
+            padding: 60px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            right: -50px;
+            top: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(179,155,114,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .hero-text h1 {
+            font-size: 42px;
+            color: #f0e6d2;
+            font-weight: 700;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        .hero-text p {
+            color: #c9bfae;
+            font-size: 16px;
+            max-width: 600px;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: #b39b72;
+            color: #1a1a1a;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 3px;
+            letter-spacing: 1px;
+        }
+        .hero-quote {
+            background: rgba(255,255,255,0.05);
+            border-left: 3px solid #b39b72;
+            padding: 20px 25px;
+            max-width: 400px;
+            color: #d6cdbd;
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-top: 25px;
+        }
+
+        /* 内容区通用 */
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #b39b72;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: #8a7a5c;
+        }
+        .section-sub {
+            color: #7a7265;
+            font-size: 15px;
+            margin-top: -15px;
+            margin-bottom: 30px;
+        }
+
+        /* 剧情简介 */
+        .intro-section {
+            padding: 60px 0 40px;
+            background: #fff;
+        }
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+        .intro-text p {
+            margin-bottom: 16px;
+            color: #3f3a35;
+            font-size: 16px;
+            text-align: justify;
+        }
+        .intro-card {
+            background: #faf8f5;
+            border: 1px solid #e5ddd2;
+            padding: 25px;
+            border-radius: 5px;
+        }
+        .intro-card h3 {
+            font-size: 18px;
+            color: #b39b72;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #d6cbbd;
+        }
+        .intro-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee8e0;
+            font-size: 15px;
+            display: flex;
+            gap: 12px;
+        }
+        .intro-card ul li:last-child {
+            border-bottom: none;
+        }
+        .intro-card .label {
+            color: #b39b72;
+            font-weight: 600;
+            min-width: 70px;
+        }
+
+        /* 角色解析 */
+        .character-section {
+            padding: 60px 0;
+            background: #f5f3f0;
+        }
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .character-card {
+            background: #fff;
+            border-radius: 6px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            border-top: 3px solid #b39b72;
+            transition: 0.2s;
+        }
+        .character-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
+        }
+        .character-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+        .character-actor {
+            font-size: 13px;
+            color: #8a7a5c;
+            margin-bottom: 12px;
+        }
+        .character-desc {
+            font-size: 14px;
+            color: #55504a;
+            line-height: 1.7;
+        }
+
+        /* 经典片段 */
+        .classic-section {
+            padding: 60px 0;
+            background: #1a1a1a;
+        }
+        .classic-section .section-title {
+            color: #e8dcc8;
+            border-bottom-color: #b39b72;
+        }
+        .classic-section .section-sub {
+            color: #a09585;
+        }
+        .classic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .classic-item {
+            background: #242220;
+            border-radius: 5px;
+            padding: 25px;
+            border-left: 3px solid #b39b72;
+        }
+        .classic-item h3 {
+            color: #d4c7b5;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .classic-item p {
+            color: #9c9387;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* 观剧指南 */
+        .guide-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .guide-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: #faf8f5;
+            border-radius: 6px;
+            border: 1px solid #eee5d9;
+        }
+        .guide-item .step {
+            font-size: 32px;
+            font-weight: 700;
+            color: #b39b72;
+            margin-bottom: 10px;
+        }
+        .guide-item h3 {
+            font-size: 17px;
+            margin-bottom: 12px;
+            color: #2c2a28;
+        }
+        .guide-item p {
+            font-size: 14px;
+            color: #6b645c;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 0;
+            background: #f5f3f0;
+        }
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 20px 25px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.02);
+        }
+        .faq-item h3 {
+            font-size: 17px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .faq-item p {
+            font-size: 15px;
+            color: #5a554f;
+            line-height: 1.7;
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background: #121110;
+            padding: 40px 0 20px;
+            color: #7a7265;
+            font-size: 14px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #a8a095;
+        }
+        .footer-links a:hover {
+            color: #b39b72;
+        }
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #2a2825;
+            padding-top: 20px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .header-nav ul {
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero-text h1 {
+                font-size: 30px;
+            }
+            .hero-content {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+            .classic-grid {
+                grid-template-columns: 1fr;
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <span class="logo-main">纤纤影视</span>
+                <span class="logo-sub">琅琊榜专题</span>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#intro">剧情简介</a></li>
+                    <li><a href="#characters">人物解析</a></li>
+                    <li><a href="#classic">经典片段</a></li>
+                    <li><a href="#guide">观剧指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 主视觉 -->
+        <section class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>纤纤影视·琅琊榜<br>权谋风云再回首</h1>
+                    <p>一部权谋史诗，一卷风云人物。纤纤影视带您深入琅琊榜的世界，从江左梅郎到朝堂博弈，品味这部古装正剧的独特魅力。</p>
+                    <span class="hero-badge">经典古装权谋剧</span>
+                    <div class="hero-quote">
+                        "遥映人间冰雪样，暗香幽浮曲临江。遍识天下英雄路，俯首江左有梅郎。"
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 剧情简介 -->
+        <section class="intro-section" id="intro">
+            <div class="container">
+                <h2 class="section-title">琅琊榜剧情概览</h2>
+                <p class="section-sub">十二年沉冤，一朝风云起</p>
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <p>电视剧《琅琊榜》根据海宴同名小说改编，由孔笙、李雪执导，胡歌、刘涛、王凯等主演。故事围绕"麒麟才子"梅长苏展开，他本是将门之子林殊，因十二年前的赤焰军冤案身中火寒之毒，化名苏哲回到帝都金陵。</p>
+                        <p>梅长苏以病弱之躯搅动朝堂风云，扶持靖王萧景琰争夺储位，同时暗中调查赤焰军覆灭的真相。剧中既有朝堂之上的权谋交锋，也有江湖之中的恩怨情仇，更有人物之间深厚的情感羁绊。</p>
+                        <p>纤纤影视为您梳理这部经典剧集的完整脉络，从雪夜初遇、江左盟风云，到夺嫡之路的步步惊心，再到最后的沉冤昭雪，每一处细节都值得反复品味。</p>
+                        <p>该剧播出后广受好评，凭借精良制作、严谨剧情和演员出色演绎，成为国产古装剧的标杆之作，至今仍被无数观众反复重温。</p>
+                    </div>
+                    <div class="intro-card">
+                        <h3>剧集信息</h3>
+                        <ul>
+                            <li><span class="label">剧集名称</span> 琅琊榜</li>
+                            <li><span class="label">首播时间</span> 2015年9月</li>
+                            <li><span class="label">剧集类型</span> 古装 / 权谋 / 历史</li>
+                            <li><span class="label">主要演员</span> 胡歌、刘涛、王凯等</li>
+                            <li><span class="label">剧集集数</span> 54集</li>
+                            <li><span class="label">原著小说</span> 海宴《琅琊榜》</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 角色解析 -->
+        <section class="character-section" id="characters">
+            <div class="container">
+                <h2 class="section-title">核心人物深度解析</h2>
+                <p class="section-sub">每个角色都是一段人生</p>
+                <div class="character-grid">
+                    <div class="character-card">
+                        <div class="character-name">梅长苏</div>
+                        <div class="character-actor">胡歌 饰 · 江左盟宗主</div>
+                        <p class="character-desc">原名林殊，赤焰军少帅。经历火寒之毒后，化身麒麟才子梅长苏，以病弱之躯运筹帷幄。他既有智计百出的谋略，又怀揣赤子之心，是整部剧的灵魂人物。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-name">萧景琰</div>
+                        <div class="character-actor">王凯 饰 · 靖王</div>
+                        <p class="character-desc">赤焰军旧人，林殊的挚友。性格刚直倔强，虽不擅权谋却心怀天下。在梅长苏的辅佐下逐步成长，最终登上帝位，为赤焰军平反。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-name">霓凰郡主</div>
+                        <div class="character-actor">刘涛 饰 · 云南穆府</div>
+                        <p class="character-desc">林殊的未婚妻，镇守云南的女将。性格坚毅刚强，对林殊一往情深。多年后重逢却物是人非，她的深情与克制令人动容。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-name">言侯与谢玉</div>
+                        <div class="character-actor">宁文彤 / 刘奕君 饰</div>
+                        <p class="character-desc">两位朝堂重臣，一忠一奸，构成朝堂势力的两极。谢玉作为反派人物，其野心与算计推动了整个权谋故事的发展。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-name">飞流</div>
+                        <div class="character-actor">吴磊 饰 · 梅长苏护卫</div>
+                        <p class="character-desc">身世凄惨的少年，被梅长苏收留后成为其贴身护卫。武功高强但心智单纯，对梅长苏有着绝对的忠诚与依赖。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-name">秦般若</div>
+                        <div class="character-actor">王鸥 饰 · 红袖招</div>
+                        <p class="character-desc">璇玑公主的徒弟，执掌红袖招情报组织。聪慧机敏，与梅长苏在暗处多次交锋，是剧中重要的女性反派角色。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-name">蒙挚</div>
+                        <div class="character-actor">陈龙 饰 · 禁军统领</div>
+                        <p class="character-desc">禁军大统领，为人忠厚正直。因与林舒旧交，在梅长苏回京后给予许多暗中帮助，是靖王阵营的重要助力。</p>
+                    </div>
+                    <div class="character-card">
+                        <div class="character-name">静妃</div>
+                        <div class="character-actor">刘敏涛 饰 · 靖王生母</div>
+                        <p class="character-desc">靖王萧景琰的生母，原是林府医女。心思细腻、温婉坚韧，在复杂的后宫中始终保持着清醒与善良，是靖王最坚实的后盾。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 经典片段回顾 -->
+        <section class="classic-section" id="classic">
+            <div class="container">
+                <h2 class="section-title">那些无法忘怀的经典瞬间</h2>
+                <p class="section-sub">纤纤影视带您重温剧中的高光时刻</p>
+                <div class="classic-grid">
+                    <div class="classic-item">
+                        <h3>初入金陵 · 麒麟才子</h3>
+                        <p>梅长苏踏雪而来，一句"江左梅郎，麒麟之才，得之可得天下"，让他成为各方势力争夺的焦点。这一登场，奠定了整部剧的权谋基调。</p>
+                    </div>
+                    <div class="classic-item">
+                        <h3>苏宅夜谈 · 赤子之心</h3>
+                        <p>梅长苏与靖王在苏宅中的多次夜谈，既有君臣之礼，又有故人之谊。两人从相互试探到完全信任，是剧中最动人的情感线之一。</p>
+                    </div>
+                    <div class="classic-item">
+                        <h3>霓凰相认 · 物是人非</h3>
+                        <p>当霓凰郡主认出眼前这位病弱的谋士就是当年的林殊哥哥时，那句"你瘦了"道尽十二年的思念与辛酸，堪称全剧最催泪片段。</p>
+                    </div>
+                    <div class="classic-item">
+                        <h3>朝堂辩理 · 舌战群臣</h3>
+                        <p>梅长苏在朝堂之上，面对各方责难，以缜密的逻辑和过人的胆识为赤焰军正名。这场戏充分展现了权谋剧的魅力所在。</p>
+                    </div>
+                    <div class="classic-item">
+                        <h3>靖王登基 · 沉冤得雪</h3>
+                        <p>萧景琰最终登上皇位，为赤焰军平反昭雪。当真相大白于天下时，所有等待与牺牲都显得值得，为故事画上圆满句号。</p>
+                    </div>
+                    <div class="classic-item">
+                        <h3>梅岭旧事 · 火寒之毒</h3>
+                        <p>剧中通过闪回逐渐揭开梅长苏的真实身份与赤焰军覆灭的真相，那场发生在梅岭的惨烈战役，成为贯穿全剧的核心谜团。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 观剧指南 -->
+        <section class="guide-section" id="guide">
+            <div class="container">
+                <h2 class="section-title">纤纤影视观剧指南</h2>
+                <p class="section-sub">初次观看或重温经典，这些建议或许有用</p>
+                <div class="guide-grid">
+                    <div class="guide-item">
+                        <div class="step">01</div>
+                        <h3>了解背景设定</h3>
+                        <p>故事发生在大梁王朝，属于架空历史。了解基本的朝堂格局和人物关系，能让您更快进入剧情。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="step">02</div>
+                        <h3>关注细节伏笔</h3>
+                        <p>琅琊榜的精彩之处在于草蛇灰线、伏脉千里。很多看似不经意的台词和场景，都为后续剧情埋下重要伏笔。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="step">03</div>
+                        <h3>品味人物情感</h3>
+                        <p>除了权谋斗争，剧中人物之间的情感羁绊同样动人。梅长苏与靖王的兄弟情、与霓凰的爱情，都值得细细品味。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="step">04</div>
+                        <h3>搭配原著观看</h3>
+                        <p>电视剧改编自同名小说，若想更深入理解人物内心世界，可以在观剧之余翻阅原著，会有不一样的收获。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="step">05</div>
+                        <h3>关注台词艺术</h3>
+                        <p>本剧台词精炼考究，大量使用典故与古语，既符合人物身份，又极具美感。很多台词值得反复咀嚼。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="step">06</div>
+                        <h3>观看幕后花絮</h3>
+                        <p>了解拍摄背后的故事，欣赏剧组在服化道、礼仪等方面的用心，能提升您的观剧体验。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <h2 class="section-title">关于琅琊榜的常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>琅琊榜是根据真实历史改编的吗？</h3>
+                        <p>不是。琅琊榜是架空历史小说，故事发生在大梁王朝，属于虚构朝代。但剧中涉及的一些制度、礼仪参照了南北朝时期的历史背景。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>梅长苏最后是死了还是活着？</h3>
+                        <p>电视剧的结局相对开放。在最后一集中，梅长苏随军出征，留下了"战死沙场"的结局暗示。原著小说中同样没有明确描写他是否存活，给读者和观众留下了想象空间。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>琅琊榜为什么被称为经典权谋剧？</h3>
+                        <p>因为该剧在权谋博弈的描写上逻辑严密、环环相扣，每个计谋都有充分的铺垫和合理的推演。同时剧中人物塑造立体，不脸谱化，加上制作精良，因此被广泛认可为国产权谋剧的经典代表。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>琅琊榜有第二部吗？</h3>
+                        <p>有。2017年播出了《琅琊榜之风起长林》，故事设定在琅琊榜结局的几十年后，由黄晓明、刘昊然等主演，讲述新一代人的故事。虽然评价不及第一部，但整体制作水准依然较高。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>在纤纤影视可以观看琅琊榜吗？</h3>
+                        <p>纤纤影视作为影视资讯与内容分享平台，为您提供关于琅琊榜的深度解析、观剧指南与相关资讯。具体的正片播放请关注官方授权视频平台。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>琅琊榜中有哪些值得注意的细节？</h3>
+                        <p>剧中细节非常丰富，例如梅长苏的衣着变化反映其身体状况，不同人物使用的礼仪动作符合其身份地位，甚至连背景中的书法、器物都经过考究。重温时不妨留意这些细节，会有更多发现。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#intro">剧情简介</a>
+                <a href="#characters">人物解析</a>
+                <a href="#classic">经典片段</a>
+                <a href="#guide">观剧指南</a>
+                <a href="#faq">常见问题</a>
+            </div>
+            <div class="copyright">
+                <p>纤纤影视 · 专注品质影视内容分享 | 本站内容仅为影视爱好者交流学习使用</p>
+                <p style="margin-top:5px;">琅琊榜电视剧相关图片与视频版权归原制作方所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
